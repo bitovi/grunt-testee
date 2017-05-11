@@ -1,0 +1,58 @@
+{
+  "name": "grunt-testee",
+  "description": "Grunt task for Testee",
+  "version": "0.0.0",
+  "author": {
+    "name": "Chris Andrejewski",
+    "email": "core@donejs.com",
+    "url": "https://www.bitovi.com/"
+  },
+  "browser": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "dependencies": {
+    "testee": "^0.5.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "fixpack": "^2.3.1",
+    "grunt": "^1.0.1",
+    "jshint": "^2.9.1"
+  },
+  "homepage": "https://github.com/bitovi/grunt-testee",
+  "keywords": [
+    "donejs-plugin",
+    "grunt",
+    "gruntplugin",
+    "runner",
+    "task",
+    "test",
+    "testee"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitovi/grunt-testee.git"
+  },
+  "scripts": {
+    "lint": "fixpack && npm run jshint",
+    "jshint": "jshint ./*.js ./src/ --config",
+    "postpublish": "git push --tags && git checkout master && git branch -D release && git push",
+    "preversion": "npm test",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish",
+    "test": "npm run jshint && ava --serial"
+  }
+}
