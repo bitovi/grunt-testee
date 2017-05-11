@@ -37,7 +37,7 @@
     "testee"
   ],
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "tasks/testee.js",
   "peerDependencies": {
     "grunt": ">=0.4.0"
   },
@@ -48,7 +48,7 @@
   "scripts": {
     "lint": "fixpack && npm run jshint",
     "jshint": "jshint ./*.js ./src/ --config",
-    "postpublish": "git push --tags && git checkout master && git branch -D release && git push",
+    "postpublish": "git push --tags && git checkout master && git push",
     "preversion": "npm test",
     "release:major": "npm version major && npm publish",
     "release:minor": "npm version minor && npm publish",
