@@ -7,24 +7,19 @@
     "email": "core@donejs.com",
     "url": "https://www.bitovi.com/"
   },
-  "browser": {
-    "transform": [
-      "cssify"
-    ]
-  },
-  "browserify": {
-    "transform": [
-      "cssify"
-    ]
+  "bugs": {
+    "url": "https://github.com/bitovi/grunt-testee/issues"
   },
   "dependencies": {
     "testee": "^0.5.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",
+    "coveralls": "^2.13.1",
     "fixpack": "^2.3.1",
     "grunt": "^1.0.1",
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "nyc": "^10.3.2"
   },
   "homepage": "https://github.com/bitovi/grunt-testee",
   "keywords": [
@@ -38,6 +33,17 @@
   ],
   "license": "MIT",
   "main": "tasks/testee.js",
+  "nyc": {
+    "include": [
+      "src/*.js"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
   "peerDependencies": {
     "grunt": ">=0.4.0"
   },
@@ -46,13 +52,14 @@
     "url": "git://github.com/bitovi/grunt-testee.git"
   },
   "scripts": {
-    "lint": "fixpack && npm run jshint",
+    "coveralls": "npm run report && nyc report --reporter=text-lcov | coveralls",
     "jshint": "jshint ./*.js ./src/ --config",
-    "postpublish": "git push --tags && git checkout master && git push",
+    "lint": "fixpack && npm run jshint",
     "preversion": "npm test",
-    "release:major": "npm version major && npm publish",
-    "release:minor": "npm version minor && npm publish",
-    "release:patch": "npm version patch && npm publish",
-    "test": "npm run jshint && ava --serial"
+    "release:major": "npm version major",
+    "release:minor": "npm version minor",
+    "release:patch": "npm version patch",
+    "report": "NODE_ENV=nyc nyc npm test",
+    "test": "npm run lint && ava --serial"
   }
 }
