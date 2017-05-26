@@ -33,7 +33,7 @@ function getFiles(root, files, expand) {
     }
 
     /*
-      Any remote URLs needs to seperated out and readded to
+      Any remote URLs need to separated out and added back to
       the output files after expansion.
     */
     var remoteUrls = files.filter(isRemoteUrl);

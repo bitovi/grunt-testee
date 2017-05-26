@@ -4,7 +4,6 @@
 
 [![npm](https://img.shields.io/npm/v/grunt-testee.svg)](https://www.npmjs.com/package/grunt-testee)
 [![Build Status](https://travis-ci.org/bitovi/grunt-testee.svg?branch=master)](https://travis-ci.org/bitovi/grunt-testee)
-[![Coverage Status](https://coveralls.io/repos/github/bitovi/grunt-testee/badge.svg?branch=master)](https://coveralls.io/github/bitovi/grunt-testee?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/bitovi/grunt-testee.svg)](https://greenkeeper.io/)
 
 ## Install
