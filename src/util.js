@@ -36,8 +36,8 @@ function getFiles(root, files, expand) {
       Any remote URLs need to separated out and added back to
       the output files after expansion.
     */
-    var remoteUrls = files.filter(isRemoteUrl);
-    var expandedFiles = expand(files);
+    var remoteUrls = inputFiles.filter(isRemoteUrl);
+    var expandedFiles = expand(inputFiles);
     return [].concat(expandedFiles).concat(remoteUrls);
 }
 
@@ -53,7 +53,7 @@ function expandFiles(transform, root, files) {
         });
     }
 
-    files = transform(files);
+    files = transform(files, {cwd: root});
 
     if (root) {
         files = files.map(function (filepath) {

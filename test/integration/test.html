@@ -1,0 +1,16 @@
+<!doctype html>
+<title>grunt-testee</title>
+<script src="../../../node_modules/qunitjs/qunit/qunit.js"></script>
+<script>
+
+QUnit.test('works', function (assert) {
+	var done = assert.async()
+	setTimeout(function () {
+		assert.ok(true, 'test should run');
+		done()
+	}, 1000)
+});
+
+</script>
+<h1><code>grunt-testee</code> works!</h1>
+<div id="qunit-fixture"></div>

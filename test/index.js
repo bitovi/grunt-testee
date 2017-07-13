@@ -34,7 +34,7 @@ test('testeeFiles() should not have absolute paths', t => {
     t.deepEqual(testeeFiles(root, files, grunt.file.expand), files)
 })
 
-test('testeFiles() should expand globs', t => {
+test('testeeFiles() should expand globs', t => {
     const root = __dirname
     const files = ['*.js']
     t.deepEqual(testeeFiles(root, files, grunt.file.expand), ["index.js"])
