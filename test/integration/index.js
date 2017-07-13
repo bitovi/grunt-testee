@@ -6,7 +6,7 @@ test('Grunt task works', function (t) {
 	var gruntfilePath = path.join(__dirname, 'Gruntfile.js');
 	var args = ['--gruntfile', gruntfilePath, 'testee'];
 	var options = {
-		env: {DEBUG: 'testee:*'},
+		// env: {DEBUG: 'testee:*'},
 		stdout: 'inherit',
 		stderr: 'inherit'
 	};
