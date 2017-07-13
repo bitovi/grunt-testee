@@ -71,9 +71,9 @@ function testeeFiles(root, files, expand) {
 }
 
 module.exports = {
-    flatten,
-    isRemoteUrl,
-    getFiles,
-    expandFiles,
-    testeeFiles
+    flatten: flatten,
+    isRemoteUrl: isRemoveUrl,
+    getFiles: getFiles,
+    expandFiles: expandFiles,
+    testeeFiles: testeeFiles
 };
