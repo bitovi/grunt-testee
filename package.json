@@ -57,6 +57,6 @@
     "release:major": "npm version major",
     "release:minor": "npm version minor",
     "release:patch": "npm version patch",
-    "test": "DEBUG=testee:* npm run lint && ava --serial"
+    "test": "npm run lint && ava --serial"
   }
 }
