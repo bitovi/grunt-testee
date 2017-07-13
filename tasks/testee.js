@@ -7,7 +7,7 @@ module.exports = function gruntTestee(grunt) {
     var options = this.options();
     var root = options.root || '';
     var browsers = options.browsers || ['phantom'];
-    var files = util.testeeFiles(root, this.files(), grunt.file.expand);
+    var files = util.testeeFiles(root, this.files, grunt.file.expand);
     if (!files.length) {
       console.log('No files passed to Testee task.');
       return done();
