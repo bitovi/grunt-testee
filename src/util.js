@@ -72,7 +72,7 @@ function testeeFiles(root, files, expand) {
 
 module.exports = {
     flatten: flatten,
-    isRemoteUrl: isRemoveUrl,
+    isRemoteUrl: isRemoteUrl,
     getFiles: getFiles,
     expandFiles: expandFiles,
     testeeFiles: testeeFiles
