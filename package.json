@@ -20,7 +20,7 @@
     "testee": "^0.7.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.25.0",
     "execa": "^0.8.0",
     "fixpack": "^2.3.1",
     "grunt": "^1.0.1",
