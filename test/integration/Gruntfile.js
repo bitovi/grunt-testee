@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 			  	browsers: ["firefox"],
 					root: root
 				},
-				src: ["test/integration/test.html"]
+				src: ["test/integration/index.html"]
 		  }
     }
   });
