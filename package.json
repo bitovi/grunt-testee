@@ -17,7 +17,7 @@
     "url": "https://github.com/bitovi/grunt-testee/issues"
   },
   "dependencies": {
-    "testee": "^0.10.0"
+    "testee": "^0.10.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
